@@ -1,0 +1,88 @@
+/* src/HomePage.css */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #003366; /* Dark blue */
+    font-family: Arial, sans-serif;
+    background-color: white;
+    background-size: cover;
+    transition: background-image 0.5s ease;
+}
+
+.navbar {
+    width: 100%;
+    background-color: #003366; /* Dark blue */
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-title {
+    margin: 0;
+}
+
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    margin: 0;
+}
+
+.navbar-links li {
+    cursor: pointer;
+}
+
+.content {
+    text-align: center;
+}
+
+.description {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.options {
+    display: flex;
+    gap: 20px;
+}
+
+.option-button {
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    color: white;
+    background-color: #003366; /* Dark blue */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.option-button:hover {
+    background-color: #00509e; /* Lighter blue */
+}
+
+.result {
+    margin-top: 30px;
+    padding: 20px;
+    border: 1px solid #003366;
+    border-radius: 5px;
+    background-color: #f0f8ff; /* Light blue */
+}
+
+/* Background images based on diagnosis */
+.container.Cavity {
+    background-image: url("C:/Users/bella/Pictures/ayoub.png"); /* Replace with your image path */
+}
+
+.container.Gum_Disease {
+    background-image: url("C:/Users/bella/Pictures/ayoub.png"); /* Replace with your image path */
+}
+
+.container.Tooth_Sensitivity{
+    background-image: url("C:/Users/bella/Pictures/ayoub.png"); /* Replace with your image path */
+}
