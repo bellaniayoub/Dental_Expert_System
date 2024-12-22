@@ -217,13 +217,25 @@ import "./App.css";
 const App = () => {
   const [selectedSection, setSelectedSection] = useState("");
   const [checkedQuestions, setCheckedQuestions] = useState({});
-
+  const [diagnosis, setDiagnosis] = useState(null); // State for diagnosis result
   // Questions for each section
   const questions = {
     general: [
-      "What tests are required?",
-      "What is the expected delivery date for test results?",
-      "Are additional materials needed?",
+      "Do you find it hard to chew food?",
+      "Are your gums swollen or red?",
+      "Have you been experiencing a fever?",
+      "Do your gums feel painful or tender, even without touching them?",
+      "Have you been experiencing a fever?",
+      "Have you noticed any pus or festering around your gums or teeth?",
+      "Do you feel pain when opening your mouth?",
+      "Do you have a toothache or throbbing pain in your teeth?",
+      "Are your teeth more sensitive than usual?",
+      "Do you have sores or pockets between your teeth and gums?",
+      "Have you noticed your gums forming a circular shape?",
+      "Do your gums feel soft or inconsistent in texture?",
+      "Are your cheeks swollen?",
+      "Do your teeth appear longer than normal?",
+      "Are any of your teeth loose or wobbly?",
     ],
     gum: [
       "What symptoms does the patient have?",
@@ -247,6 +259,14 @@ const App = () => {
       },
     }));
   };
+
+  // Handle section change
+  const handleSectionChange = (section) => {
+    setSelectedSection(section);
+    setDiagnosis(null); // Clear diagnosis when a new section is selected
+  };
+
+
   // Handle form submission
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -278,7 +298,7 @@ const App = () => {
     try{  
       if (response.ok) {
         const data = await response.json();
-        alert("Submission successful: " + JSON.stringify(data));
+        setDiagnosis(data['prediction']); // Store the response in the state
       } else {
         alert("Failed to submit. Please try again.");
       }
@@ -293,19 +313,19 @@ const App = () => {
       <div className="section-buttons">
         <button
           className="button-link"
-          onClick={() => setSelectedSection("general")}
+          onClick={() => handleSectionChange("general")}
         >
           General disease
         </button>
         <button
           className="button-link"
-          onClick={() => setSelectedSection("gum")}
+          onClick={() => handleSectionChange("gum")}
         >
           Gum disease
         </button>
         <button
           className="button-link"
-          onClick={() => setSelectedSection("tooth")}
+          onClick={() => handleSectionChange("tooth")}
         >
           Tooth disease
         </button>
@@ -334,6 +354,16 @@ const App = () => {
               <button type="submit" className="submit-btn">
                 Submit
               </button>
+              <div id='diagnose'>
+              {/* Render the diagnosis response */}
+              {diagnosis ? (
+                <div>
+                  <h3>Diagnosis Result:</h3>
+                  <pre>{JSON.stringify(diagnosis, null, 2)}</pre>
+                </div>
+              ) :(<div></div>)
+              }
+              </div>
             </form>
           </div>
         )}
