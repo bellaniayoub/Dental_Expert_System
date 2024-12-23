@@ -42,7 +42,8 @@ def submit_data():
     data = request.json
     section = data.get('category')
     questions = data.get('indices', [])
-    
+    prolog.query("diagnoze(" + section + ", " + str(questions) + ", X)")
+    result = prolog.query("X")
     # Log received data
     print(f"Received section: {section}")
     print(f"Received questions: {questions}")

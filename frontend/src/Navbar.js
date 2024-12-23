@@ -7,7 +7,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <div className="logo">
-          <h2>Diagnocat</h2>
+          <Link to='/'><h2>Diagnocat</h2></Link>
         </div>
       </div>
       <div className="navbar-right">
@@ -15,7 +15,7 @@ const Navbar = () => {
           <li className="nav-item">
             <Link to="/DiseasesPage">Products</Link>
             <ul className="dropdown">
-              <li><a href="#">Product 1</a></li>
+              <li><a href="">Product 1</a></li>
               <li><a href="#">Product 2</a></li>
             </ul>
           </li>

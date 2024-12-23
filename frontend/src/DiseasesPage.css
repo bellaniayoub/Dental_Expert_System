@@ -43,12 +43,15 @@
   width: 80%;
   padding: 20px;
   box-sizing: border-box; /* Include padding in width calculation */
+  display: flex; /* Use flexbox for layout */
+  flex-direction: row; /* Align content in a row */
+  align-items: flex-start; /* Align items at the top */
+  gap: 20px; /* Space between the image and text */
 }
 
 .disease-image {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   height: auto;
-  display: block;
-  margin-bottom: 20px;
+  margin-left: auto; /* Push the image to the right */
 }

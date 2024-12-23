@@ -4,7 +4,7 @@ import "./DiseasesPage.css"; // Import the CSS for styling
 
 const DiseasesPage = () => {
   const diseases = [
-    { code: "k0001", name: "Abscess Periodontal", description: "Description for Abscess Periodontal", image: "C:/Users/bella/Desktop/Master/Fondament_Ai/Project/Dental_expert_system/frontend/img/PeriodondalAbscess.jpg" },
+    { code: "k0001", name: "Abscess Periodontal", description: "A periodontal abscess is a localized infection that forms in the tissues surrounding a tooth, often resulting from bacterial infection in a pocket of gum tissue. It typically occurs in individuals with existing gum disease, such as periodontitis. This condition is marked by swollen, red, and painful gums, often accompanied by fever and a sensation of throbbing pain, particularly when chewing. A visual representation of a periodontal abscess would include inflamed gums, with a localized bump or pimple-like formation on the gum surface near the affected tooth, with redness and swelling.", image: "/img/PeriodondalAbscess.jpg" },
     { code: "k0002", name: "Abscess Periapical", description: "Description for Abscess Periapical", image: "path/to/image2.jpg" },
     { code: "k0003", name: "Anodontia", description: "Description for Anodontia", image: "path/to/image3.jpg" },
     { code: "k0004", name: "Tooth Abrasion", description: "Description for Tooth Abrasion", image: "path/to/image4.jpg" },
@@ -32,9 +32,9 @@ const DiseasesPage = () => {
           </ul>
         </div>
         <div className="disease-details">
-          <h1>{selectedDisease.name}</h1>
+          <div><h1>{selectedDisease.name}</h1>
+          <p>{selectedDisease.description}</p></div>
           <img src={selectedDisease.image} alt={selectedDisease.name} className="disease-image" />
-          <p>{selectedDisease.description}</p>
         </div>
       </div>
     </Layout>
