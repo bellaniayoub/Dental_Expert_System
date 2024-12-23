@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Navbar.css'; // Import the styles
 
 const Navbar = () => {
@@ -12,7 +13,7 @@ const Navbar = () => {
       <div className="navbar-right">
         <ul className="nav-links">
           <li className="nav-item">
-            <a href="#">Products</a>
+            <Link to="/DiseasesPage">Products</Link>
             <ul className="dropdown">
               <li><a href="#">Product 1</a></li>
               <li><a href="#">Product 2</a></li>

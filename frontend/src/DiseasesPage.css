@@ -1,0 +1,54 @@
+.diseases-page {
+  padding: 0px;
+  display: flex;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+.diseases-page h1 {
+  margin-top: 0;
+}
+
+.diseases-page ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.diseases-page li {
+  margin-bottom: 5px;
+}
+
+.side-nav {
+  width: 20%;
+  padding: 20px;
+  background-color: #f4f4f4;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.side-nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.side-nav li {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.side-nav li:hover {
+  background-color: #ddd;
+}
+
+.disease-details {
+  width: 80%;
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.disease-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+}

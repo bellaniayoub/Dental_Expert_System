@@ -1,10 +1,19 @@
 /* App.css */
 
+body, html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
 .app-container {
   font-family: Arial, sans-serif;
   text-align: center;
   padding: 20px;
   background-color: #f4f8fb;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 .section-buttons {
@@ -13,6 +22,9 @@
   justify-content: center;
   gap: 15px;
   margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
 }
 
 .button-link {
@@ -24,12 +36,22 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s ease;
+  margin: 0 10px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .button-link:hover {
   background-color: #2980b9;
+  background-color: #0056b3;
 }
-
+.button-link.selected {
+  background-color: #0056b3; /* Different color for selected button */
+  border: 2px solid #003f7f; /* Add a border to indicate selection */
+}
 .questions-section {
   background-color: #ffffff;
   border: 1px solid #ddd;
@@ -38,6 +60,8 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   max-width: 600px;
   margin: 0 auto;
+  flex: 1;
+  padding: 20px;
 }
 
 .questions-section h2 {
@@ -50,6 +74,7 @@
   text-align: left;
   font-size: 16px;
   color: #2c3e50;
+  margin-bottom: 10px;
 }
 
 .checkbox-item label {
@@ -71,13 +96,26 @@
   cursor: pointer; /* Changes the cursor to a pointer on hover */
   font-size: 16px; /* Sets font size */
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
 }
 
 .submit-btn:hover {
   background-color: #2980b9; /* Darker blue on hover */
   transform: scale(1.05); /* Slightly enlarge the button */
+  background-color: #218838;
 }
 
 .submit-btn:active {
   transform: scale(1); /* Reset scale when clicked */
+}
+
+.footer {
+  text-align: center;
+  padding: 10px;
+  background-color: #f1f1f1;
 }
