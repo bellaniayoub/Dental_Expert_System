@@ -79,13 +79,6 @@
     background-image: url("C:/Users/bella/Pictures/ayoub.png"); /* Replace with your image path */
 }
 
-.container.Gum_Disease {
-    background-image: url("C:/Users/bella/Pictures/ayoub.png"); /* Replace with your image path */
-}
-
-.container.Tooth_Sensitivity{
-    background-image: url("C:/Users/bella/Pictures/ayoub.png"); /* Replace with your image path */
-}
 
 .home-container {
   font-family: Arial, sans-serif;
@@ -106,7 +99,7 @@
 }
 
 .button-link {
-  background-color: #3498db;
+  background-color: #56c4c8;
   color: white;
   border: none;
   padding: 10px 20px;
@@ -121,7 +114,7 @@
 }
 
 .button-link.selected {
-  background-color: #0056b3; /* Different color for selected button */
+  background-color: #56c4c8; /* Different color for selected button */
   border: 2px solid #003f7f; /* Add a border to indicate selection */
 }
 

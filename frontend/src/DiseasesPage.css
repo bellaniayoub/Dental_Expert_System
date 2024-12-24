@@ -48,10 +48,12 @@
   align-items: flex-start; /* Align items at the top */
   gap: 20px; /* Space between the image and text */
 }
-
+.disease-details div p {
+  font-size: larger;
+}
 .disease-image {
-  width: 100%;
-  max-width: 500px;
+  width: 400px;
+  /* max-width: 300px; */
   height: auto;
   margin-left: auto; /* Push the image to the right */
 }

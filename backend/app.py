@@ -35,15 +35,21 @@ from pyswip import Prolog
 app = Flask(__name__)
 CORS(app)
 prolog = Prolog()
-
+symptomes = {"general":["g0015","g0001","g0013","g0017","g0018",], "tooth":["g0001","g0002","g0004","g0005","g0006","g0008","g0009","g0010","g0012","g0014","g0019","g0020","g0023","g0024" ], "gum":["g0001","g0003","g0004","g0007","g0009","g0010","g0016","g0008","g0021","g0022","g0025","g0026","g0027","g0028"]}
 prolog.consult("Expert_System.pl")
 @app.route('/api/submit', methods=['POST'])
 def submit_data():
     data = request.json
     section = data.get('category')
     questions = data.get('indices', [])
-    prolog.query("diagnoze(" + section + ", " + str(questions) + ", X)")
-    result = prolog.query("X")
+    print(questions)
+    checked_questions = [symptomes[section][i] for i in questions]
+    print(checked_questions)
+    prolog_list = str(checked_questions).replace("'", "")
+    query=f"diagnose_user('{section}', {checked_questions}, Result)"
+    results = list(prolog.query(query))  
+    # Format results for JSON response
+    print(results)
     # Log received data
     print(f"Received section: {section}")
     print(f"Received questions: {questions}")
@@ -53,7 +59,7 @@ def submit_data():
         "message": "Data received successfully",
         "received_section": section,
         "received_indices": questions,
-        "prediction": "Helllo"
+        "prediction": results
     }
     return jsonify(response), 200
 

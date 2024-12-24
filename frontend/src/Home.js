@@ -13,12 +13,11 @@ const Home = () => {
 
   // Questions for each section
   const questions = {
-    general: [
+    tooth: [
       "Do you find it hard to chew food?",
       "Are your gums swollen or red?",
       "Have you been experiencing a fever?",
       "Do your gums feel painful or tender, even without touching them?",
-      "Have you been experiencing a fever?",
       "Have you noticed any pus or festering around your gums or teeth?",
       "Do you feel pain when opening your mouth?",
       "Do you have a toothache or throbbing pain in your teeth?",
@@ -31,14 +30,27 @@ const Home = () => {
       "Are any of your teeth loose or wobbly?",
     ],
     gum: [
-      "What symptoms does the patient have?",
-      "What are the patient's medical records?",
-      "What is the preliminary diagnosis?",
-    ],
-    tooth: [
-      "What equipment is needed?",
-      "Are there any recurring patient issues?",
-      "What dental software is being used?",
+      "Do you find it hard to chew food?",
+      "Do you experience swelling in your jaw?",
+      "Are you currently running a fever?",
+      "Do you have swollen lymph nodes?",
+      "Do you feel pain when opening your mouth?",
+      "Do you suffer from toothache or throbbing pain in your teeth?",
+      "Are your teeth more sensitive than usual?",
+      "Do your teeth appear eroded or worn down?",
+      "Do you notice white or brownish stains on your tooth surfaces?",
+      "Are your tooth surfaces rough to the touch?",
+      "Do you see any visible cracks in your teeth?",
+      "Do you have any broken teeth?",
+      "Do you feel pain when eating cold, sweet, or sour foods?",
+      "Are there any holes visible on the surface of your teeth?"
+  ],
+    general: [
+    "Do not grow all or some teeth, both milk teeth and permanent?",
+    "Do you find it hard to chew food?",
+    "Are your teeth sensitive to sweetness?",
+    "Do you experience earache?",
+    "Do you have insomnia or feel uneasy?"
     ],
   };
 
@@ -101,6 +113,9 @@ const Home = () => {
 
   return (
     <Layout>
+      <div>
+        <img src="/img/fiche.jpg" alt="logo" ></img>
+      </div>
       <div className="section-buttons">
         <button
           className={`button-link ${selectedSection === "general" ? "selected" : ""}`}

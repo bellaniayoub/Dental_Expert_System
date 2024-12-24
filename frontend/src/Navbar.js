@@ -7,39 +7,25 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-left">
         <div className="logo">
-          <Link to='/'><h2>Diagnocat</h2></Link>
+          <Link to='/'><img src='/img/logo.jpg'></img></Link>
         </div>
       </div>
       <div className="navbar-right">
         <ul className="nav-links">
-          <li className="nav-item">
-            <Link to="/DiseasesPage">Products</Link>
-            <ul className="dropdown">
-              <li><a href="">Product 1</a></li>
-              <li><a href="#">Product 2</a></li>
-            </ul>
+        <li className="nav-item">
+            <Link to="/">Diagnose</Link>
           </li>
           <li className="nav-item">
-            <a href="#">About</a>
-            <ul className="dropdown">
-              <li><a href="#">Our Story</a></li>
-              <li><a href="#">Team</a></li>
-            </ul>
+            <Link to="/DiseasesPage">Diseases</Link>
           </li>
           <li className="nav-item">
-            <a href="#">Events</a>
-            <ul className="dropdown">
-              <li><a href="#">Event 1</a></li>
-              <li><a href="#">Event 2</a></li>
-            </ul>
+            <Link to='/Agency'>Agnecies</Link>
           </li>
           <li className="nav-item">
-            <a href="#">Resources</a>
-            <ul className="dropdown">
-              <li><a href="#">Blog</a></li>
-              <li><a href="#">Guides</a></li>
-            </ul>
+            <Link to="/About">About</Link>
           </li>
+          
+          
         </ul>
         <button className="login-btn">Login</button>
       </div>

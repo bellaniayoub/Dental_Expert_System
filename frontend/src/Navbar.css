@@ -103,10 +103,10 @@ body {
   border-bottom: 1px solid #e0e0e0;
 }
 
-.navbar-left .logo h2 {
+.navbar-left .logo img {
   margin: 0;
-  font-size: 24px;
-  color: #4f4f4f;
+  height: 50px; /* Adjust height as needed */
+  width: 100px; /* Adjust width as needed */
 }
 
 .navbar-right .nav-links {
@@ -171,7 +171,7 @@ body {
 
 .navbar-right .login-btn,
 .navbar-right .signup-btn {
-  background-color: #007bff;
+  background-color: #56c4c8;
   color: white;
   border: none;
   padding: 10px 20px;
