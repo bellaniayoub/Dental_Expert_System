@@ -6,7 +6,18 @@ const Home = () => {
   const [selectedSection, setSelectedSection] = useState("general");
   const [checkedQuestions, setCheckedQuestions] = useState({});
   const [diagnosis, setDiagnosis] = useState(null); // State for diagnosis result
-
+  const dentalMalignancies = {
+    K0001: "Abscess Periodontal",
+    K0002: "Abscess Periapical",
+    K0003: "Anodontia",
+    K0004: "Tooth Abrasion",
+    K0005: "Bruxism",
+    K0006: "Gingivitis",
+    K0007: "Gums Purulent",
+    K0008: "Tooth Perforated",
+    K0009: "Fractures Tooth",
+    K0010: "Periodontitis"
+  };
   useEffect(() => {
     setSelectedSection("general"); // Automatically select the first button
   }, []);
@@ -69,6 +80,10 @@ const Home = () => {
   const handleSectionChange = (section) => {
     setSelectedSection(section);
     setDiagnosis(null); // Clear diagnosis when a new section is selected
+    const targetSection = document.getElementById("question-section");
+    if (targetSection) {
+      targetSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   // Handle form submission
@@ -101,7 +116,7 @@ const Home = () => {
     try {
       if (response.ok) {
         const data = await response.json();
-        setDiagnosis(data["prediction"]); // Store the response in the state
+        setDiagnosis(data["prediction"][0]['Result']); // Store the response in the state
       } else {
         alert("Failed to submit. Please try again.");
       }
@@ -113,8 +128,8 @@ const Home = () => {
 
   return (
     <Layout>
-      <div>
-        <img src="/img/fiche.jpg" alt="logo" ></img>
+      <div className="motivation-img">
+        <img src="/img/fiche.jpg" alt="fiche" ></img>
       </div>
       <div className="section-buttons">
         <button
@@ -136,7 +151,7 @@ const Home = () => {
           Tooth disease
         </button>
       </div>
-      <div className="questions-section">
+      <div className="questions-section" id = "question-section">
         {selectedSection && (
           <div>
             <h2>Questions for {selectedSection}</h2>

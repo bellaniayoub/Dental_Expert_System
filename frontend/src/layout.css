@@ -86,30 +86,14 @@ body {
     background-color: #0056b3;
   }
   
-/* Footer Styles */
+
+  
+.footer-container {
+  padding: 0;
+  margin: 0;
+}
 .footer {
-    background-color: #f4f8fb;
-    color: #203e45;
-    text-align: center;
-    padding: 15px 10px;
-    margin-top: 20px;
-    border-top: 1px solid #bdc3c7;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-  }
-  
-  .footer p {
-    margin: 5px 0;
-    font-size: 14px;
-  }
-  
-  .footer a {
-    color: #3498db;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
+  width: 100%;
+  height: auto;
+}
   

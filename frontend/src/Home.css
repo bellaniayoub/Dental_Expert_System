@@ -89,7 +89,15 @@
   flex-direction: column;
   min-height: 100vh;
 }
-
+.motivation-img{
+  width: 50%;
+}
+.motivation-img img{
+  width: 500px;
+  height: 100px;
+  max-width: 600px;
+  margin: 0 auto;
+}
 .section-buttons {
   margin-top: 20px;
   display: flex;

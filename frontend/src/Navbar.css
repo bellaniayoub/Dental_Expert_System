@@ -106,7 +106,7 @@ body {
 .navbar-left .logo img {
   margin: 0;
   height: 50px; /* Adjust height as needed */
-  width: 100px; /* Adjust width as needed */
+  width: 150px; /* Adjust width as needed */
 }
 
 .navbar-right .nav-links {
@@ -129,7 +129,7 @@ body {
 }
 
 .navbar-right .nav-item:hover > a {
-  color: #007bff;
+  color: #56c4c8;
 }
 
 .navbar-right .nav-item .dropdown {
@@ -169,20 +169,3 @@ body {
   gap: 10px; /* Add spacing between login and signup buttons */
 }
 
-.navbar-right .login-btn,
-.navbar-right .signup-btn {
-  background-color: #56c4c8;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  cursor: pointer;
-  font-size: 14px;
-  border-radius: 4px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.navbar-right .login-btn:hover,
-.navbar-right .signup-btn:hover {
-  background-color: #0056b3;
-}

@@ -1,4 +1,4 @@
-% Relations entre sympt�mes et maladies avec des coefficients de certitude (CF)
+% Relations entre symptomes et maladies avec des coefficients de certitude (CF)
 cf(g0001, k0001, 0.8).
 cf(g0002, k0001, 0.4).
 cf(g0006, k0001, 0.2).
@@ -46,7 +46,7 @@ cf(g0012, k0010, 0.6).
 cf(g0023, k0010, 0.3).
 cf(g0024, k0010, 0.4).
 
-% Liens entre cat�gories et maladies
+% Liens entre categories et maladies
 categorie(gum, k0002).
 categorie(gum, k0004).
 categorie(gum, k0008).
@@ -60,16 +60,16 @@ categorie(general, k0005).
 
 % Calculer le pourcentage de certitude pour une maladie
 calculate_percentage(Disease, Symptoms, Percentage) :-
-    % R�cup�rer les CF des sympt�mes s�lectionn�s pour la maladie
+    % Recuperer les CF des symptomes selectionnes pour la maladie
     findall(CF, (
         member(Symptom, Symptoms),
         cf(Symptom, Disease, CF)
     ), SelectedCFs),
 
-    % Calculer la somme des CF des sympt�mes s�lectionn�s
+    % Calculer la somme des CF des symptomes selectionn�s
     sum_list(SelectedCFs, SumSelectedCF),
 
-    % R�cup�rer les CF de tous les sympt�mes li�s � la maladie
+    % Recuperer les CF de tous les symptomes lies a la maladie
     findall(CF, cf(_, Disease, CF), AllCFs),
 
     % Calculer la somme totale des CF pour la maladie
@@ -80,9 +80,9 @@ calculate_percentage(Disease, Symptoms, Percentage) :-
     Percentage is (SumSelectedCF / TotalCF) * 100.
     %Percentage is round(Percentage* 100) / 100.
 
-% Diagnostiquer une cat�gorie avec les sympt�mes donn�s
+% Diagnostiquer une categorie avec les symptemes donnes
 diagnose_user(Section, Symptoms, Result) :-
-    % R�cup�rer toutes les maladies dans la section sp�cifi�e
+    % Recuperer toutes les maladies dans la section specifiee
     findall(Disease, categorie(Section, Disease), Diseases),
 
     % Calculer le pourcentage pour chaque maladie
@@ -92,7 +92,7 @@ diagnose_user(Section, Symptoms, Result) :-
         Percentage >= 50  % Seules les maladies avec un pourcentage >= 50
     ), PossibleDiseases),
 
-    % R�sultat final
+    % Resultat final
     ( PossibleDiseases = [] ->
         Result = []  % Retourne une liste vide
     ;
