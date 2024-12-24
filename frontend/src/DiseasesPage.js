@@ -94,49 +94,49 @@ const DiseasesPage = () => {
       code: "k0003",
       name: "Anodontia",
       description: "Anodontia is a rare congenital condition where one or more teeth are absent at birth. It can affect both primary (baby) teeth and permanent teeth. This disorder can cause difficulty in chewing, speaking, and can impact a person’s appearance. It may be hereditary or related to genetic syndromes. Individuals with anodontia often require dental prosthetics or orthodontic treatment to restore function and aesthetics. The image of anodontia would feature a mouth with visible gaps where teeth should be, highlighting the absence of teeth, and showing how this condition affects facial aesthetics.",
-      image: "path/to/image3.jpg"
+      image: "img/k3.jpg"
     },
     {
       code: "k0004",
       name: "Tooth Abrasion",
       description: "Tooth abrasion happens when the enamel of the teeth is worn away due to external factors such as aggressive brushing, excessive use of hard-bristled toothbrushes, or teeth grinding. This leads to tooth sensitivity, especially to hot or cold foods, and a noticeable thinning or worn-down appearance on the teeth. Over time, abrasion can lead to increased risk of cavities and other dental issues. An image of tooth abrasion would show the surface of the teeth with visible wear marks, possibly along the gumline or on the biting surfaces, with an emphasis on the damage caused to enamel.",
-      image: "path/to/image4.jpg"
+      image: "img/k4.jpg"
     },
     {
       code: "k0005",
       name: "Bruxism",
       description: "Bruxism refers to the grinding or clenching of teeth, typically during sleep. This condition can lead to worn-down teeth, jaw pain, headaches, and sensitivity. Over time, bruxism may cause the enamel to erode, resulting in visible flattening or chipping of the teeth. Stress, anxiety, and certain sleep disorders are common contributing factors. Managing bruxism often involves the use of mouthguards and stress-reduction techniques. A typical image for bruxism would show a worn-down surface of teeth with noticeable flattening or cracking, alongside the involvement of jaw muscles, potentially in a diagram showing the tension and pressure applied during grinding.",
-      image: "path/to/image5.jpg"
+      image: "img/k5.jpg"
     },
     {
       code: "k0006",
       name: "Caries",
       description: "Dental caries, commonly known as cavities, are permanently damaged areas in the hard surface of your teeth that develop into tiny openings or holes. They are caused by a combination of factors, including bacteria in your mouth, frequent snacking, sipping sugary drinks, and not cleaning your teeth well. If left untreated, cavities can lead to severe toothache, infection, and even tooth loss. An image depicting dental caries would show a tooth with visible decay, highlighting the areas where the enamel has been compromised.",
-      image: "path/to/image6.jpg"
+      image: "img/k6.jpg"
     },
     {
       code: "k0007",
       name: "Dental Erosion",
       description: "Dental erosion involves the loss of tooth enamel due to acid attack. Unlike cavities caused by bacteria, erosion is the result of acids directly dissolving the enamel. Common sources include acidic foods and beverages, as well as conditions like acid reflux. Over time, erosion can lead to sensitivity, discoloration, and an increased risk of cavities. Preventive measures include reducing acidic intake and maintaining good oral hygiene. An image of dental erosion would show smooth, shiny areas on the tooth surface where enamel has been worn away, often exposing the underlying dentin.",
-      image: "path/to/image7.jpg"
+      image: "img/k7.jpg"
     },
     {
       code: "k0008",
       name: "Gingivitis",
       description: "Gingivitis is the mildest form of gum disease, causing irritation, redness, and swelling of the gums due to plaque buildup. If left untreated, gingivitis can progress to more severe periodontal diseases. The main symptoms include red, swollen gums that may bleed easily when brushing or flossing. Maintaining good oral hygiene and regular dental check-ups are essential for preventing and treating gingivitis. An image of gingivitis would show inflamed gums around the teeth, with redness and possible bleeding at the gumline, highlighting the early stages of gum disease.",
-      image: "path/to/image8.jpg"
+      image: "img/k8.jpg"
     },
     {
       code: "k0009",
       name: "Halitosis",
       description: "Halitosis, commonly known as bad breath, can result from poor dental hygiene, certain foods, or underlying health issues. Persistent bad breath may indicate gum disease, cavities, or other dental problems. It can also be influenced by factors such as dry mouth, tobacco use, or systemic conditions like diabetes. Addressing halitosis involves identifying and treating the underlying cause, maintaining proper oral hygiene, and regular dental visits. An image representing halitosis might depict bacteria on the tongue or inflamed gums, illustrating common sources of bad breath.",
-      image: "path/to/image9.jpg"
+      image: "img/k9.jpg"
     },
     {
       code: "k0010",
       name: "Oral Cancer",
       description: "Oral cancer encompasses cancers of the mouth and throat. Risk factors include tobacco use, heavy alcohol consumption, and human papillomavirus (HPV) infection. Early signs may include sores that don't heal, lumps, or white or red patches in the mouth. Early detection is crucial for successful treatment, making regular dental check-ups important for screening. Treatment often involves surgery, radiation, and chemotherapy. An image of oral cancer might show a lesion or tumor within the oral cavity, highlighting areas of abnormal cell growth.",
-      image: "/img/oral_cancer.jpg"
+      image: "img/k10.jpg"
     }
   ];
   

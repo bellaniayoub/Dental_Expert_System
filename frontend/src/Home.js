@@ -7,16 +7,16 @@ const Home = () => {
   const [checkedQuestions, setCheckedQuestions] = useState({});
   const [diagnosis, setDiagnosis] = useState(null); // State for diagnosis result
   const dentalMalignancies = {
-    K0001: "Abscess Periodontal",
-    K0002: "Abscess Periapical",
-    K0003: "Anodontia",
-    K0004: "Tooth Abrasion",
-    K0005: "Bruxism",
-    K0006: "Gingivitis",
-    K0007: "Gums Purulent",
-    K0008: "Tooth Perforated",
-    K0009: "Fractures Tooth",
-    K0010: "Periodontitis"
+    "k0001": "Abscess Periodontal",
+    "k0002": "Abscess Periapical",
+    "k0003": "Anodontia",
+    "k0004": "Tooth Abrasion",
+    "k0005": "Bruxism",
+    "k0006": "Gingivitis",
+    "k0007": "Gums Purulent",
+    "k0008": "Tooth Perforated",
+    "k0009": "Fractures Tooth",
+    "k0010": "Periodontitis"
   };
   useEffect(() => {
     setSelectedSection("general"); // Automatically select the first button
@@ -176,17 +176,28 @@ const Home = () => {
                 Submit
               </button>
               <div id="diagnose">
-                {/* Render the diagnosis response */}
-                {diagnosis ? (
-                  <div>
-                    <h3>Diagnosis Result:</h3>
-                    <pre>{JSON.stringify(diagnosis, null, 2)}</pre>
-                  </div>
-                ) : (
-                  <div></div>
-                )}
-              </div>
-            </form>
+  {/* Render the diagnosis response */}
+  {diagnosis ? (
+    <div>
+      <h3>Diagnosis Result:</h3>
+      {diagnosis.length > 0 ? (
+        <ul>
+          {diagnosis.map(([code, confidence]) => (
+            <li key={code}>
+              {confidence < 60
+                ? `You may have ${dentalMalignancies[code] || "an unknown malignancy"}`
+                : `You're having ${dentalMalignancies[code] || "an unknown malignancy"}`}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p>Congratulation ! You don't have any dental malignancies</p>
+      )}
+    </div>
+  ) : null}
+</div>
+
+          </form>
           </div>
         )}
       </div>

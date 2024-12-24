@@ -1,10 +1,12 @@
 /* Basic styles */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
   }
-  
+*{
+  font-family: inherit;
+}
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -90,7 +92,7 @@ body {
   
 .footer-container {
   padding: 0;
-  margin: 0;
+  margin-top: 10px;
 }
 .footer {
   width: 100%;

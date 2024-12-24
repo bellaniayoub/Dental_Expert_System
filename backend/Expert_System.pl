@@ -89,7 +89,7 @@ diagnose_user(Section, Symptoms, Result) :-
     findall([Disease, Percentage], (
         member(Disease, Diseases),
         calculate_percentage(Disease, Symptoms, Percentage),
-        Percentage >= 50  % Seules les maladies avec un pourcentage >= 50
+        Percentage >= 40  % Seules les maladies avec un pourcentage >= 50
     ), PossibleDiseases),
 
     % Resultat final

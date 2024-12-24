@@ -15,7 +15,6 @@ body, html {
   flex-direction: column;
   min-height: 100vh;
 }
-
 .section-buttons {
   margin-top: 20px;
   display: flex;
@@ -45,10 +44,10 @@ body, html {
 }
 
 .button-link:hover {
-  background-color: #0056b3;
+  background-color: #27a3a7;
 }
 .button-link.selected {
-  background-color: #0056b3;
+  background-color: #27a3a7;
   /* border: 2px solid #909191; Add a border to indicate selection */
 }
 .questions-section {
@@ -97,16 +96,14 @@ body, html {
   transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
   margin-top: 20px;
   padding: 10px 20px;
-  background-color: #28a745;
   color: white;
   border: none;
   cursor: pointer;
 }
 
 .submit-btn:hover {
-  background-color: #2980b9; /* Darker blue on hover */
+  background-color: #27a3a7; /* Darker blue on hover */
   transform: scale(1.05); /* Slightly enlarge the button */
-  background-color: #218838;
 }
 
 .submit-btn:active {

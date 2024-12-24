@@ -43,4 +43,10 @@
   .about-page a:hover {
     color: #2980b9;
   }
-  
+.diseases{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
